@@ -1,0 +1,1 @@
+Selamat datang di proyek IT Corner. IT Corner adalah forum yang berisi beberapa artikel dan pertanyaan seputar IT. IT Corner dibuat oleh kelompok MPPL E02. Repositori ini berisi kegiatan proyek IT Corner. Anda bisa melihat issue dan kegiatan yang sedang berjalan pada proyek ini.
