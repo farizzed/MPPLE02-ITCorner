@@ -9,10 +9,10 @@
   <script src="assets/bootstrap/js/jquery.min.js" type="text/javascript"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 </head>
-<body background="login-back.jpg" style="background-position:center">
+<body background="login-back.jpg" style="background-position:center;background-attachment:fixed">
   <div class="container">
     
-    <div class="row" style="padding-top:50px;">
+    <div class="row" style="padding-top:30px;">
       <div class="col-md-4 col-md-offset-4">
       <p align="center"><img src="itcorner-hitam.png" style="align:center;"></p>
         <div class="panel panel-default outer-login">
@@ -38,7 +38,7 @@
             <div class="form-group">
               <label class="control-label">Username</label>
               <div class="controls">
-                <input class="form-control" type="text" name="nama_pegawai">
+                <input class="form-control" type="text" name="username">
               </div>
             </div>
             <div class="form-group">
@@ -48,15 +48,28 @@
               </div>
             </div>
             <div class="form-group">
+              <label class="control-label">Password (Ulangi)</label>
+              <div class="controls">
+                <input class="form-control" type="password" name="password">
+              </div>
+            </div>
+            <div class="form-group">
               <label class="control-label">Nama Lengkap</label>
               <div class="controls">
-                <input class="form-control" type="text" name="nama_pegawai">
+                <input class="form-control" type="text" name="nama">
               </div>
             </div>
             <div class="form-group">
               <label class="control-label">E-mail</label>
               <div class="controls">
-                <input class="form-control" type="text" name="nama_pegawai">
+                <input class="form-control" type="text" name="email">
+              </div>
+            </div>
+            <div class="form-group">
+            <label class="control-label">Ketiklah huruf yang tertera pada gambar!</label>
+              <p><img src="captcha.jpg"><br></p>
+              <div class="controls">
+                <input class="form-control" type="text" name="captcha">
               </div>
             </div>
                 <div class="pull-left">

@@ -29,10 +29,10 @@
             <li>
               <a href="home_user.php">Beranda</a>
             </li>
-            <li class="active">
+            <li>
               <a href="list_artikel_user.php">Artikel</a>
             </li>
-            <li>
+            <li class="active">
               <a href="list_pertanyaan_user.php">Pertanyaan</a>
             </li>
             

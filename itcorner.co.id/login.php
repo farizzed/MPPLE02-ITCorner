@@ -9,18 +9,19 @@
   <script src="assets/bootstrap/js/jquery.min.js" type="text/javascript"></script>
   <script src="assets/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
 </head>
-<body background="login-back.jpg" style="background-position:center">
+<body background="login-back.jpg" style="background-position:center;background-attachment:fixed ">
   <div class="container">
     
-    <div class="row" style="padding-top:125px;">
+    <div class="row" style="padding-top:75px;">
       <div class="col-md-4 col-md-offset-4">
         <p align="center"><img src="itcorner-hitam.png" style="align:center;"></p>
         <div class="panel panel-default outer-login">
           <div class="panel-body">
             <?php
-            /*if(isset($_SERVER['HTTP_REFERER']))
-            {*/
-            $a=$_SERVER['HTTP_REFERER'];
+            if(isset($_SERVER['HTTP_REFERER']))
+            {
+              $a=$_SERVER['HTTP_REFERER'];
+            }
             /*  if(strcmp($a,"http://localhost/itcorner.co.id/index.php") === 0)
               {
                 echo "<div class='alert alert-dismissable alert-danger'>
@@ -34,20 +35,33 @@
             {
               $user = $_POST['username'];
               $pass = $_POST['password'];
+              $capt = $_POST['captcha'];
 
-              if ($user == "admin" && $pass == "admin")
+              if ($user == "admin" && $pass == "admin" && $capt == "3JYP4")
               {
                 header('Location: home_admin.php');
               }
-              elseif ($user == "farizzed" && $pass == "123")
+              elseif ($user == "farizzed" && $pass == "123" && $capt == "3JYP4")
               {
                 header('Location: home_user.php');
+              }
+              elseif ($user == "" || $pass == "" || $capt == "")
+              {
+                echo "<div class='alert alert-dismissable alert-danger'>
+                      <button type='button' class='close' data-dismiss='alert'>&times;</button>
+                      Silahkan isi isian dengan lengkap</div>";
+              }
+              elseif ($capt != "3JYP4")
+              {
+                echo "<div class='alert alert-dismissable alert-danger'>
+                      <button type='button' class='close' data-dismiss='alert'>&times;</button>
+                      Kode gambar yang anda masukkan salah</div>";
               }
               else
               {
                 echo "<div class='alert alert-dismissable alert-danger'>
                       <button type='button' class='close' data-dismiss='alert'>&times;</button>
-                      ID atau Password yang Anda masukkan salah !</div>";
+                      ID atau Password yang Anda masukkan salah</div>";
               }
             }
 
@@ -79,6 +93,13 @@
               <label class="control-label">Password</label>
               <div class="controls">
                 <input class="form-control" type="password" name="password">
+              </div>
+            </div>
+            <div class="form-group">
+            <label class="control-label">Ketiklah huruf yang tertera pada gambar!</label>
+              <p><img src="captcha.jpg"><br></p>
+              <div class="controls">
+                <input class="form-control" type="text" name="captcha">
               </div>
             </div>
                 <div class="pull-left">
