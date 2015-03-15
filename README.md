@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/farizzed/MPPLE02-ITCorner/master/itcorner.co.id/itcorner-hitam.png"/>
+  <img src="https://raw.githubusercontent.com/farizzed/MPPLE02-ITCorner/master/itcorner%20-%20Web%20Final/itcorner-hitam.png"/>
 </p>
 
 <p align="center">
